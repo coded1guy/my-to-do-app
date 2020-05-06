@@ -1,0 +1,220 @@
+body{
+    min-height:100%;
+    font-family: Bad Script;
+    background: #91eae4;  /* fallback for old browsers */
+    background: -webkit-repeating-linear-gradient(150deg, #91EAE4 5%, #86A8E7 10%, #7F7FD5 20%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: repeating-linear-gradient(110deg, #91EAE4 3%, #86A8E7 3%, #7F7FD5 3%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.left {
+	float: left;
+	margin-top: 5%;
+}
+.right {
+	float: right;
+	margin-top: 5%;
+}
+h1{
+    text-transform: uppercase;
+    background: red;
+    color:white;
+    margin: 0;
+    padding:10px 28px;
+    font-weight: normal;
+}
+.input {
+	width: 95%;
+	background: white;
+	margin: 0;
+	padding-left: 5%;
+	border-left: none;
+    border-top: none;
+    border-bottom: 1px solid gray;
+}
+.add {
+	width: 10%;
+}
+input{
+    background: white;
+    width: 85%;
+    box-sizing: border-box;
+    height:50px ;
+    border: none;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: 0.5px;
+    padding-left:25px;
+    color: chocolate;
+}
+input:focus{
+    background: #edf1f5;
+    outline:none;
+    color: chocolate;
+}
+input::placeholder {
+ color: chocolate;
+ font-family: cursive;
+}
+span{
+    margin-right: 10px;
+    text-align:center;
+    height:50px;
+    width: 0;
+    opacity: 0;
+    -webkit-transition:0.3s;
+    transition: 0.3s linear;
+}
+
+i{
+    cursor: pointer;
+}
+button{
+    background-color:#86a8e7; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius:4px;
+    font-family:Bad Script;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #86a8e7;
+}
+
+#buttons{
+    display:inline-block;
+    text-align:center;
+    margin-left:22%;
+    position:absolute;
+    bottom:5px;
+}
+#todo{
+    width: 90%;
+    margin: 5%;
+    box-shadow: 0 0 16px white;
+    max-width: 400px;
+    padding-top: 5%;
+    height: 100%;
+		border: 2px solid black;
+		background: beige;
+		color: hsl(230, 29%, 20%);
+		border-radius: 25px;
+}.cont {
+		width: 90%;
+		margin: 5%;
+		padding-top: 5%;
+		border: 2px solid black;
+		background: beige;
+		color: hsl(230, 29%, 20%);
+		border-radius: 25px;
+	}
+#overlay{
+    height: 0;
+    width: 100%;
+    position: fixed; 
+    margin-top: 5%;
+    maryin-bottom: 5%;
+    z-index: 1; 
+    left: 0;
+    color: maroon;
+    font-weight: 900;
+    font-size: 18px;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(225,225,255, 0.8); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    -webkit-transition:  0.5s;
+}
+#overlay button {
+	font-weight: 600;
+	 font-size: 20px;
+}
+#overlay .closebtn {
+    position: absolute;
+    top: 1%;
+    right: 40px;
+    font-size: 80px;
+    color:red;
+    cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+.todos{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.todos li{
+	border-left: none;
+    border-top: none;
+    border-bottom: 1.5px dashed gray;
+    color: gray;
+}
+.todos li{
+    background: #f7f7f7;
+    height:50px;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.todos li:nth-child(2n){
+    background:#edf1f5;
+}
+.todos li:hover span{
+    width: 50px;
+    opacity: 1.0;
+    margin-left: 5px;
+}
+.display{
+    display:none;
+    transition: 0.3s linear;
+}
+.checked{
+    color:gray;
+    text-decoration:line-through;
+}
+
+.fa-pencil-alt{
+    float: right;
+    padding-top: 8px;
+}
+.fa-trash-alt{
+    color:#7f7fd5;
+}
+.tips{
+    position: relative;
+    top: 20%;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center; 
+    margin-top: 30px;
+    padding-bottom: 5%;
+    height: auto;
+    border: 1px solid black;
+}
+/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    #todo{
+        width:100%;
+        height:100%;
+    }
+}

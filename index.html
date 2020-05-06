@@ -1,0 +1,46 @@
+<DOCTYPE html!>
+
+    <head>
+        <title>my To-Do App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "Stylesheet" href = "css/todo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <link rel = "shortcut icon" href="assets/favicon.ico">
+        <link rel="icon" type="image/gif" href="assests/animated_favicon1.gif" >
+        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        		<script src="https://kit.fontawesome.com/b74db746b5.js" crossorigin="anonymous"></script>
+     </head>
+
+ <body>
+  <div id = "todo">
+   <h1> MY TO-DO LIST </h1>
+   <div class="input">
+    <i class="add fas fa-plus-circle"></i>
+    <input type = "text" placeholder="Add New Todo">
+   </div>
+            <ul class="todos">
+                
+                <li><span class="left"><i class="far fa-circle"></i></span>make a to do<span class="right"><i class="fas fa-trash-alt"></i></span>
+                </li>
+            </ul>
+
+            <div id= "buttons">
+            	 <button><i id="pencil" class="fas fa-pencil-alt"></i></button>
+                <button class="save"><i class="fa fa-save"></i></button>
+                <button class="clear"><i class="fa fa-refresh"></i></button>
+            </div>
+        </div>
+
+        <div id = "overlay">
+           <a href="javascript:void(0)" class="closebtn">&times;</a>
+           <div class="tips">
+           	 <p>Are you sure you want to delete it<br>
+           	 	once deleted, it cannnot be restored again</p>
+           	 	<button>yes</button>
+            <button>No</button>
+           </div>
+        </div>
+        <script src="Js/todo2.js"></script>
+    </body>
